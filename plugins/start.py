@@ -83,17 +83,17 @@ async def start(bot, message):
                     )
                 frwded += 1
                 pling += 1
-            except FloodWait as e:
-                await asyncio.sleep(e.x)
-                logger.warning(f"Floodwait of {e.x} sec.")
-                await bot.send_cached_media(
-                    chat_id=TARGET_CHANNEL,
-                    file_id=msg.get("file_id"),
-                    caption=f_caption,
-                    protect_content=msg.get('protect', False),
-                    )
-                frwded += 1
-                pling += 1
+            #except FloodWait as e:
+                #await asyncio.sleep(e.x)
+                #logger.warning(f"Floodwait of {e.x} sec.")
+                #await bot.send_cached_media(
+                    #chat_id=TARGET_CHANNEL,
+                    #file_id=msg.get("file_id"),
+                    #caption=f_caption,
+                    #protect_content=msg.get('protect', False),
+                    #)
+                #frwded += 1
+                #pling += 1
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
