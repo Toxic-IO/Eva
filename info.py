@@ -20,14 +20,14 @@ def is_enabled(value, default):
 # Bot information
 API_ID = int(environ("API_ID","19134212"))
 API_HASH = environ("API_HASH","0d85b66bf650d9d64ec178e51fa6b2c9")
-BOT_TOKEN = environ("BOT_TOKEN","")
+BOT_TOKEN = environ("BOT_TOKEN","5687256282:AAEMAuzorgf_Snl8wrN6bzZPf6MPTIWAhFQ")
 SESSION = environ.get('SESSION', 'Media_search')
 
 # Admin, Channels
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get("ADMINS","").split()]
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL",""))
-TARGET_CHANNEL = int(environ.get("TARGET_CHANNEL",""))
-FILE_CAPTION = environ.get("FILE_CAPTION","")
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get("ADMINS","1239693367").split()]
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL","-1001642167463"))
+TARGET_CHANNEL = int(environ.get("TARGET_CHANNEL","-1001518768219"))
+FILE_CAPTION = environ.get("FILE_CAPTION","{file_name}\n\n🔘 size - {file_size}")
 
 def get_size(size):
     """Get size in readable format"""
